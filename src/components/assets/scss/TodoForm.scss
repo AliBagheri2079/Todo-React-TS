@@ -1,0 +1,83 @@
+@import "variable";
+
+//* todo form style
+.todo-form {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fee2c5b2;
+    width: clamp(18rem, 65vw, 62rem);
+    margin: 15px auto;
+    padding-inline: 1.5em;
+    border: 1px solid $light-gray;
+    border-radius: .9rem;
+
+    >legend {
+        font-size: 2em;
+        color: $dark-blue;
+        padding-inline: 1rem;
+        padding-block-start: .2rem;
+    }
+
+    .row:not(:last-child) {
+        margin-bottom: 0 !important;
+    }
+
+    .todo-status {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid $light-blue;
+        border-radius: 10px;
+
+        >option:first-child {
+            background: #151313
+        }
+    }
+}
+
+//* input style
+.input-field {
+
+    /* label color */
+    label {
+        color: $light-blue;
+        font-size: 1.1em;
+    }
+
+    input[type=text],
+    textarea#textarea2 {
+        font-size: 1.1em;
+        color: #1e2021 !important;
+
+        /* label underline focus color */
+        &:focus {
+            border-bottom: 1px solid $light-blue !important;
+            box-shadow: 0 1px 0 0 $light-blue;
+
+            /* label focus color */
+            +label {
+                color: $light-blue !important;
+            }
+        }
+    }
+
+    input[type=text] {
+
+        /* valid color */
+        &.valid {
+            // color: $light-blue;
+            border-bottom: 1px solid $light-blue !important;
+            box-shadow: 0 1px 0 0 $light-blue;
+        }
+
+        /* invalid color */
+        &.invalid {
+            // color: $light-blue;
+            border-bottom: 1px solid $dark-blue;
+            box-shadow: 0 1px 0 0 $light-blue;
+        }
+    }
+
+    /* icon prefix focus color */
+    .prefix.active {
+        color: $light-blue !important;
+    }
+}

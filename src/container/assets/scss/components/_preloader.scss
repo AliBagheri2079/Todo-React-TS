@@ -12,7 +12,7 @@
         font-weight: bold;
         line-height: .8em;
 
-        span {
+        strong {
             position: relative;
             text-transform: uppercase;
             display: block;
@@ -22,7 +22,6 @@
             &:last-child::before {
                 content: "";
                 position: absolute;
-                width: 50%;
                 height: 15%;
                 background-color: $light-blue;
 
@@ -33,33 +32,21 @@
             }
 
             &:first-child::before {
+                width: 49%;
                 inset: calc(50% - 5px) 0 auto auto;
                 transform-origin: right;
             }
 
             &:last-child::before {
+                width: 50%;
                 inset: calc(50% - 5px) auto auto 0;
                 transform-origin: left;
             }
 
             .hide-header {
                 animation: hideText 1s linear 2s forwards;
-                // transition: .5s;
-                // transition-delay: 1s;
             }
         }
-
-        // &:hover span:first-child::before,
-        // &:hover span:last-child::before {
-        //     transform: scaleX(1);
-        // }
-
-        // &:hover span .hide-header {
-        //     transition-delay: 1s;
-        //     color: $custom-light-blue;
-        //     opacity: 0;
-        //     padding-inline-start: .4em;
-        // }
     }
 }
 
@@ -87,13 +74,8 @@
     }
 }
 
-.content--animate {
-    display: none;
-    @extend .animate-bottom
-}
-
 //* Add animation to "page content"
-.animate-bottom {
+.content--animate {
     position: relative;
     animation-name: animatebottom;
     animation-duration: 1s

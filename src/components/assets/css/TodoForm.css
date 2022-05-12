@@ -1,0 +1,83 @@
+.todo-form {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fee2c5b2;
+  width: clamp(18rem, 65vw, 62rem);
+  margin: 15px auto;
+  padding-inline: 1.5em;
+  border: 1px solid #C4DDFF;
+  border-radius: .9rem;
+}
+
+.todo-form > legend {
+  font-size: 2em;
+  color: #001D6E;
+  padding-inline: 1rem;
+  -webkit-padding-before: .2rem;
+          padding-block-start: .2rem;
+}
+
+.todo-form .row:not(:last-child) {
+  margin-bottom: 0 !important;
+}
+
+.todo-form .todo-status {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid #7FB5FF;
+  border-radius: 10px;
+}
+
+.todo-form .todo-status > option:first-child {
+  background: #151313;
+}
+
+.input-field {
+  /* label color */
+  /* icon prefix focus color */
+}
+
+.input-field label {
+  color: #7FB5FF;
+  font-size: 1.1em;
+}
+
+.input-field input[type=text],
+.input-field textarea#textarea2 {
+  font-size: 1.1em;
+  color: #1e2021 !important;
+  /* label underline focus color */
+}
+
+.input-field input[type=text]:focus,
+.input-field textarea#textarea2:focus {
+  border-bottom: 1px solid #7FB5FF !important;
+  -webkit-box-shadow: 0 1px 0 0 #7FB5FF;
+          box-shadow: 0 1px 0 0 #7FB5FF;
+  /* label focus color */
+}
+
+.input-field input[type=text]:focus + label,
+.input-field textarea#textarea2:focus + label {
+  color: #7FB5FF !important;
+}
+
+.input-field input[type=text] {
+  /* valid color */
+  /* invalid color */
+}
+
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #7FB5FF !important;
+  -webkit-box-shadow: 0 1px 0 0 #7FB5FF;
+          box-shadow: 0 1px 0 0 #7FB5FF;
+}
+
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #001D6E;
+  -webkit-box-shadow: 0 1px 0 0 #7FB5FF;
+          box-shadow: 0 1px 0 0 #7FB5FF;
+}
+
+.input-field .prefix.active {
+  color: #7FB5FF !important;
+}

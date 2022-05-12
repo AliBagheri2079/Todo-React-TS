@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 /** Box sizing rules */
 *,
 *::before,
@@ -109,7 +113,7 @@ select {
   line-height: .8em;
 }
 
-.preloader > h1 span {
+.preloader > h1 strong {
   position: relative;
   text-transform: uppercase;
   display: block;
@@ -117,10 +121,9 @@ select {
   transition: .5s;
 }
 
-.preloader > h1 span:first-child::before, .preloader > h1 span:last-child::before {
+.preloader > h1 strong:first-child::before, .preloader > h1 strong:last-child::before {
   content: "";
   position: absolute;
-  width: 50%;
   height: 15%;
   background-color: #7FB5FF;
   -webkit-animation: scaleText 1s linear .5s forwards;
@@ -132,19 +135,21 @@ select {
   z-index: 1;
 }
 
-.preloader > h1 span:first-child::before {
+.preloader > h1 strong:first-child::before {
+  width: 49%;
   inset: calc(50% - 5px) 0 auto auto;
   -webkit-transform-origin: right;
           transform-origin: right;
 }
 
-.preloader > h1 span:last-child::before {
+.preloader > h1 strong:last-child::before {
+  width: 50%;
   inset: calc(50% - 5px) auto auto 0;
   -webkit-transform-origin: left;
           transform-origin: left;
 }
 
-.preloader > h1 span .hide-header {
+.preloader > h1 strong .hide-header {
   -webkit-animation: hideText 1s linear 2s forwards;
           animation: hideText 1s linear 2s forwards;
 }
@@ -206,10 +211,6 @@ select {
 }
 
 .content--animate {
-  display: none;
-}
-
-.animate-bottom, .content--animate {
   position: relative;
   -webkit-animation-name: animatebottom;
           animation-name: animatebottom;
@@ -237,43 +238,6 @@ select {
     bottom: 0;
     opacity: 1;
   }
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-#confetti {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-a.iprodev {
-  line-height: normal;
-  font-family: Varela Round, sans-serif;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 13px;
-  color: #FFB5AD;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
-  border: 1px solid #f2f3f3;
-  padding: 12px 20px 10px;
-  border-radius: 50px;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
-  text-transform: uppercase;
-}
-
-a.iprodev:hover {
-  background: #A7AAAE;
-  color: white;
 }
 
 .materialize-red {
