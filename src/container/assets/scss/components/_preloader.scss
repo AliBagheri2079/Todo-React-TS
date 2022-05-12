@@ -1,0 +1,112 @@
+.preloader {
+    margin: 0;
+    padding: 0;
+    @include flexbox;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+
+    >h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 20vw;
+        font-weight: bold;
+        line-height: .8em;
+
+        span {
+            position: relative;
+            text-transform: uppercase;
+            display: block;
+            transition: .5s;
+
+            &:first-child::before,
+            &:last-child::before {
+                content: "";
+                position: absolute;
+                width: 50%;
+                height: 15%;
+                background-color: $light-blue;
+
+                animation: scaleText 1s linear .5s forwards;
+                transform: scaleX(0);
+                transition: .5s;
+                z-index: 1;
+            }
+
+            &:first-child::before {
+                inset: calc(50% - 5px) 0 auto auto;
+                transform-origin: right;
+            }
+
+            &:last-child::before {
+                inset: calc(50% - 5px) auto auto 0;
+                transform-origin: left;
+            }
+
+            .hide-header {
+                animation: hideText 1s linear 2s forwards;
+                // transition: .5s;
+                // transition-delay: 1s;
+            }
+        }
+
+        // &:hover span:first-child::before,
+        // &:hover span:last-child::before {
+        //     transform: scaleX(1);
+        // }
+
+        // &:hover span .hide-header {
+        //     transition-delay: 1s;
+        //     color: $custom-light-blue;
+        //     opacity: 0;
+        //     padding-inline-start: .4em;
+        // }
+    }
+}
+
+@keyframes scaleText {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes hideText {
+    0% {
+        transition: .5s;
+        transition-delay: 1s;
+    }
+
+    100% {
+        transition-delay: 1s;
+        color: $light-blue;
+        opacity: 0;
+        padding-inline-start: .4em;
+    }
+}
+
+.content--animate {
+    display: none;
+    @extend .animate-bottom
+}
+
+//* Add animation to "page content"
+.animate-bottom {
+    position: relative;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
