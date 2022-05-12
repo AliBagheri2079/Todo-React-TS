@@ -34,6 +34,7 @@
 
   <!-- * background animation style -->
   <link rel="stylesheet" href="./css/bgAnimation.css">
+  
   <title>Todo React App</title>
 </head>
 
@@ -58,29 +59,9 @@
   <!--* background animation -->
   <script src="./js/bgAnimation.js"></script>
 
-  <!--* jquery cdn -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
   <!--* Compiled and minified materialize JavaScript file -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      //* modal form input character counter
-      M.updateTextFields();
-      $('input#input_text, textarea#textarea2').characterCounter();
-
-      // * modal form status structure
-      $('select').formSelect();
-
-      //* todo list enable collapsible
-      $('.collapsible').collapsible();
-
-      //* todo list dropdown botton
-      $('.dropdown-trigger').dropdown();
-    });
-  </script>
 </body>
 
 </html>

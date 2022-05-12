@@ -4,8 +4,8 @@
 .todo-form {
     font-family: 'Poppins', sans-serif;
     background-color: #fee2c5b2;
-    width: clamp(18rem, 65vw, 62rem);
-    margin: 15px auto;
+    // width: clamp(18rem, 65vw, 62rem);
+    // margin: 15px auto;
     padding-inline: 1.5em;
     border: 1px solid $light-gray;
     border-radius: .9rem;
@@ -20,8 +20,11 @@
     .row:not(:last-child) {
         margin-bottom: 0 !important;
     }
+}
 
-    .todo-status {
+//* input style
+.input-field {
+    select {
         display: inline-block;
         background-color: transparent;
         border: 1px solid $light-blue;
@@ -31,10 +34,6 @@
             background: #151313
         }
     }
-}
-
-//* input style
-.input-field {
 
     /* label color */
     label {

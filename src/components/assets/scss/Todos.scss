@@ -1,0 +1,36 @@
+@import "variable";
+@import "mixin";
+
+.todo-item {
+    background: $light-gray;
+    padding: .5em 1em;
+    border-radius: 5px;
+    margin-block-end: .3em;
+
+    &__header {
+        @include flexbox(center, space-between);
+        overflow-x: auto;
+
+        h4 {
+            cursor: pointer;
+            font-size: 1.6em;
+            margin-block-start: .5em;
+            color: $dark-blue
+        }
+
+        .right {
+            @include flexbox(center, space-between);
+
+            .badge {
+                margin-inline: 1em;
+            }
+        }
+    }
+
+    &__description {
+        color:  rgb(37, 37, 37);
+        text-indent: 1em;
+        text-align: justify;
+        margin: 1.5em 1em 1em;
+    }
+}

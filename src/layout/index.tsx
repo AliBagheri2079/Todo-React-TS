@@ -10,10 +10,11 @@ class Layout extends React.Component<LayoutProps, LayoutState> {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div style={{ width: "clamp(18rem, 65vw, 62rem)",
+        margin: "15px auto"}}>
         <TodoForm />
         <TodoList/>
-      </React.Fragment>
+      </div>
     );
   }
 }

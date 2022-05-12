@@ -1,8 +1,6 @@
 .todo-form {
   font-family: 'Poppins', sans-serif;
   background-color: #fee2c5b2;
-  width: clamp(18rem, 65vw, 62rem);
-  margin: 15px auto;
   padding-inline: 1.5em;
   border: 1px solid #C4DDFF;
   border-radius: .9rem;
@@ -20,20 +18,20 @@
   margin-bottom: 0 !important;
 }
 
-.todo-form .todo-status {
+.input-field {
+  /* label color */
+  /* icon prefix focus color */
+}
+
+.input-field select {
   display: inline-block;
   background-color: transparent;
   border: 1px solid #7FB5FF;
   border-radius: 10px;
 }
 
-.todo-form .todo-status > option:first-child {
+.input-field select > option:first-child {
   background: #151313;
-}
-
-.input-field {
-  /* label color */
-  /* icon prefix focus color */
 }
 
 .input-field label {

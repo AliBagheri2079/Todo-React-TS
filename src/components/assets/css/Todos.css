@@ -1,0 +1,51 @@
+.todo-item {
+  background: #C4DDFF;
+  padding: .5em 1em;
+  border-radius: 5px;
+  -webkit-margin-after: .3em;
+          margin-block-end: .3em;
+}
+
+.todo-item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: auto;
+}
+
+.todo-item__header h4 {
+  cursor: pointer;
+  font-size: 1.6em;
+  -webkit-margin-before: .5em;
+          margin-block-start: .5em;
+  color: #001D6E;
+}
+
+.todo-item__header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-item__header .right .badge {
+  margin-inline: 1em;
+}
+
+.todo-item__description {
+  color: #252525;
+  text-indent: 1em;
+  text-align: justify;
+  margin: 1.5em 1em 1em;
+}
