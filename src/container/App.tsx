@@ -1,11 +1,12 @@
 import React from "react";
-
-import Layout from "../layout";
+import Layout from "../components/layout";
 import "./assets/css/App.min.css";
 
 interface AppProps {}
 
-interface AppState {}
+interface AppState {
+  showContent: boolean
+}
 
 class App extends React.Component<AppProps, AppState> {
   state = {

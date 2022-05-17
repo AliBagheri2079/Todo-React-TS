@@ -30,8 +30,16 @@
   border-radius: 10px;
 }
 
+.input-field select > option {
+  font-size: 1em;
+}
+
+.input-field select > option:not(:first-child) {
+  color: #7FB5FF;
+}
+
 .input-field select > option:first-child {
-  background: #151313;
+  background: #3e4142;
 }
 
 .input-field label {
@@ -40,14 +48,14 @@
 }
 
 .input-field input[type=text],
-.input-field textarea#textarea2 {
+.input-field textarea#input-details {
   font-size: 1.1em;
   color: #1e2021 !important;
   /* label underline focus color */
 }
 
 .input-field input[type=text]:focus,
-.input-field textarea#textarea2:focus {
+.input-field textarea#input-details:focus {
   border-bottom: 1px solid #7FB5FF !important;
   -webkit-box-shadow: 0 1px 0 0 #7FB5FF;
           box-shadow: 0 1px 0 0 #7FB5FF;
@@ -55,7 +63,7 @@
 }
 
 .input-field input[type=text]:focus + label,
-.input-field textarea#textarea2:focus + label {
+.input-field textarea#input-details:focus + label {
   color: #7FB5FF !important;
 }
 

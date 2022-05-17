@@ -2,8 +2,8 @@
   background: #C4DDFF;
   padding: .5em 1em;
   border-radius: 5px;
-  -webkit-margin-after: .3em;
-          margin-block-end: .3em;
+  -webkit-margin-after: .5em;
+          margin-block-end: .5em;
 }
 
 .todo-item__header {

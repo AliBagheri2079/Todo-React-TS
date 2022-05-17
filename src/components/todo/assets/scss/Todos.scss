@@ -5,7 +5,7 @@
     background: $light-gray;
     padding: .5em 1em;
     border-radius: 5px;
-    margin-block-end: .3em;
+    margin-block-end: .5em;
 
     &__header {
         @include flexbox(center, space-between);

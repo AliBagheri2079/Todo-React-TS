@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: clamp(100vh, 100%, 1000vh);
   width: 100%;
 }
 
@@ -8,7 +8,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
+  height: clamp(100vh, 100%, 1000vh);
   width: 100%;
 }
 
