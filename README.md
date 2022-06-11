@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Simple Todo React App
+
+This project was styled with `Materialize` and `Sass`.
+and create `Typescript OOP` Logic with class components.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

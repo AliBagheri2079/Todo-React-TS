@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TodoState } from "../interface/TodosInterface";
+import { TodoState } from "../@types/Todo";
 import TodoForm from "../todo/TodoForm";
 import TodoList from "../todo/TodoList";
 
@@ -10,7 +10,7 @@ interface LayoutState {
 }
 
 class Layout extends React.Component<LayoutProps, LayoutState> {
-  state = {
+  readonly state = {
     todoItems: [
       {
         id: new Date().getTime(),
@@ -25,7 +25,10 @@ class Layout extends React.Component<LayoutProps, LayoutState> {
     ],
   };
 
- private setTodoItems = (isCreated: boolean, todos: Array<TodoState>): void => {
+  private setTodoItems = (
+    isCreated: boolean,
+    todos: Array<TodoState>
+  ): void => {
     if (isCreated) {
       this.setState({ todoItems: [...this.state.todoItems, ...todos] });
       return;

@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoProp } from "../interface/TodosInterface";
+import { TodoProp } from "../@types/Todo";
 import "./assets/css/Todos.min.css";
 
 interface TodosState {}

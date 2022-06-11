@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoState } from "../interface/TodosInterface";
+import { TodoState } from "../@types/Todo";
 import "./assets/css/TodoForm.min.css";
 
 interface TodoFormProps {
@@ -7,14 +7,16 @@ interface TodoFormProps {
 }
 
 class TodoForm extends React.PureComponent<TodoFormProps, TodoState> {
-  state = {
+  readonly state = {
     id: 1,
     title: "",
     status: "",
     details: "",
   };
 
-  private handleSubmit = (event: React.FormEvent): void => {
+  //! static contextType?: React.Context<typeof TodoContext> | undefined;
+
+  private handleSubmit = (event: React.FormEvent<EventTarget>): void => {
     event.preventDefault();
     this.handleNewTodo();
 

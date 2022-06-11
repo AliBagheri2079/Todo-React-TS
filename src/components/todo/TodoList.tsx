@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoProp } from "../interface/TodosInterface";
+import { TodoProp } from "../@types/Todo";
 import Todos from "./Todos";
 
 interface TodoListState {}
@@ -13,7 +13,7 @@ class TodoList extends React.PureComponent<TodoProp, TodoListState> {
   //   this.props.setTodoItems(true, searchedTodos);
   // };
 
-  private handleSortTodos = (event: { target: { value: string } }): void => {
+  private handleSortTodos = (event: React.ChangeEvent<HTMLSelectElement>): void => {
     const sortValue = event.target.value;
     const todos = [...this.props.todoItems];
 
